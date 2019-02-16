@@ -60,7 +60,9 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Assets\camSwitch.cs" />
     <Compile Include="Assets\coinLogic.cs" />
+    <Compile Include="Assets\mouseMove.cs" />
     <Compile Include="Assets\playerMove.cs" />
     <Compile Include="Assets\Supercyan Character Pack Free Sample\Scripts\CameraLogic.cs" />
     <Compile Include="Assets\Supercyan Character Pack Free Sample\Scripts\Demo.cs" />

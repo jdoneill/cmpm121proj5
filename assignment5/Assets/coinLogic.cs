@@ -8,13 +8,18 @@ public class coinLogic : MonoBehaviour
     //score
     public Text score;
     public int coins;
-    public Animator doorMove;
+    private int numCoins;
+    //public Animator doorMove;
     public GameObject door;
+    public ParticleSystem burst;
+    bool collect;
 
     void Start()
     {//initialize stuff
         //door = GetComponent<Animator>();
+        collect = false;
         coins = 0;
+        numCoins = 2;
         score.text = "Coins - " + coins.ToString();
     }
 
@@ -25,15 +30,22 @@ public class coinLogic : MonoBehaviour
             coins += 1;
             Destroy(other.gameObject);
             score.text = "Coins - " + coins.ToString();
+            collect = true;
         }
     }
 
     private void Update()
     {
-        if (coins >= 2)
+        if (coins >= numCoins)
         {
             //doorMove.SetTrigger("move");// play move anim for door
             Destroy(door);
+        }
+
+        if (collect)
+        {
+            burst.Emit(10);
+            collect = false;
         }
     }
 

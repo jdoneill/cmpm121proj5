@@ -61,6 +61,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Assets\camSwitch.cs" />
+    <Compile Include="Assets\coinBurst.cs" />
     <Compile Include="Assets\coinLogic.cs" />
     <Compile Include="Assets\mouseMove.cs" />
     <Compile Include="Assets\playerMove.cs" />

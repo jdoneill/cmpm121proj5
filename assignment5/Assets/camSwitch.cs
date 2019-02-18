@@ -8,6 +8,12 @@ public class camSwitch : MonoBehaviour
     public Camera back;
     public Camera front;
 
+    private void Start()
+    {
+        back.enabled = true;
+        front.enabled = false;
+    }
+
     // Update is called once per frame
     void Update()
     {
@@ -25,6 +31,16 @@ public class camSwitch : MonoBehaviour
                 back.enabled = true;
                 front.enabled = false;
             }
+        }
+        else if (Input.GetKeyDown(KeyCode.S))
+        {
+            front.enabled = true;
+            back.enabled = false;
+        }
+        else if (Input.GetKeyDown(KeyCode.W))
+        {
+            back.enabled = true;
+            front.enabled = false;
         }
     }
 }

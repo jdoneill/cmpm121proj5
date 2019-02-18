@@ -2,6 +2,8 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
+
 
 public class coinLogic : MonoBehaviour
 {
@@ -40,6 +42,12 @@ public class coinLogic : MonoBehaviour
         {
             doorMove.SetTrigger("moving");// play jump anim
             //Destroy(door);
+        }
+
+        if (coins >= numCoins + 1)
+        {
+            SceneManager.LoadScene("menu");
+
         }
 
         if (collect)
